@@ -40,3 +40,31 @@ samples, guidance on mobile development, and a full API reference.
 # detalle_screen.dart: Recibe los valores enviados desde paso_parametros.dart (el parámetro y el método de navegación),muestra el valor recibido al usuario y permite regresar a la pantalla anterior, ajustando el comportamiento según el método de navegación utilizado.
 
 # Finalmente el archivo main inicializa la aplicación, configurando un tema visual personalizado (AppTheme.lightTheme) y estableciendo la navegación mediante go_router a través del archivo app_router.dart. Todo esto se encapsula en el widget raíz MaterialApp.router, que define cómo se ve y se navega dentro de la app, desactivando además el banner de depuración.
+
+----------------------------taller 2------------------------------------------------------------------
+-Manejo de Tareas Asíncronas en Flutter
+Se incluyen tres clases (FutureView, IsolateView, TimerView) que implementan diferentes técnicas para manejar tareas asíncronas en Flutter.
+
+-FutureView: Simula la carga de una lista de estudiantes con un Future.delayed() y muestra un indicador de carga (CircularProgressIndicator) mientras la tarea está en proceso.
+Se inicia la carga de datos en el método _cargarLista(), se muestra un indicador de carga mientras el Future está pendiente, cuando la tarea se completa, la UI se actualiza con los datos obtenidos.
+
+Conceptos usados:
+Future.delayed() para simular la espera de datos.
+setState() para actualizar la UI cuando los datos están listos.
+ListView.builder() para mostrar la lista de estudiantes.
+
+-IsolateView: Ejecuta una tarea pesada en un Isolate para evitar bloquear la UI y muestra el resultado en un SnackBar. 
+Se crea un ReceivePort para recibir datos desde el Isolate,se lanza un nuevo Isolate con _simulacionTareaPesada(), se envían datos al Isolate y este procesa la información, una vez completada la tarea, el Isolate envía el resultado de vuelta, la UI se actualiza y se muestra un SnackBar con el resultado.
+
+Conceptos usados:
+Isolate.spawn() para crear un hilo secundario.
+ReceivePort y SendPort para la comunicación entre hilos.
+Isolate.exit() para cerrar el Isolate cuando termina la tarea.
+
+TimerView:Implementa un temporizador con Timer.periodic() que incrementa un contador cada segundo y permite iniciarlo, pausarlo y reiniciarlo. 
+Se presiona el botón "Iniciar", y el Timer comienza a incrementar el contador,se puede pausar el temporizador con el botón "Pausar",si se presiona "Reiniciar", el contador vuelve a 0 y el Timer se reactiva.
+
+Conceptos usados:
+Timer.periodic() para ejecutar una tarea repetitiva.
+setState() para actualizar la UI cada segundo.
+BottomNavigationBar para alternar entre el contador y una sección de descripción.
