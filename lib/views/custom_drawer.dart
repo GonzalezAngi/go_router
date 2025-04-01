@@ -78,6 +78,14 @@ class CustomDrawer extends StatelessWidget {
               context.goNamed('isolate');
             },
           ),
+           //! COMIDAS (antes Pokemones)
+          ListTile(
+            leading: const Icon(Icons.fastfood),
+            title: const Text('comidas'),
+            onTap: () {
+              context.goNamed('meals');
+            },
+          ),
         ],
       ),
     );

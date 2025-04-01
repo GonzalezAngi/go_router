@@ -2,6 +2,8 @@ import 'package:go_router/go_router.dart';
 import 'package:navegabilidadgorouter/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:navegabilidadgorouter/paso_parametros/detalle_screen.dart';
 import 'package:navegabilidadgorouter/paso_parametros/paso_parametros.dart';
+import 'package:navegabilidadgorouter/views/Listado/meal_detail_view.dart';
+import 'package:navegabilidadgorouter/views/Listado/meal_list_view.dart';
 import 'package:navegabilidadgorouter/views/future/future_view.dart';
 import 'package:navegabilidadgorouter/views/home_view.dart';
 import 'package:navegabilidadgorouter/views/isolate/isolate_view.dart';
@@ -50,6 +52,17 @@ final GoRouter appRouter = GoRouter(
       path: '/isolate', //*ruta para el demo de Isolate
       name: 'isolate', //*nombre de la ruta
       builder: (context, state) => const IsolateView(),
+    ),
+     //! Rutas para Meals
+    GoRoute(
+      path: '/meals',
+      name: 'meals',
+      builder: (context, state) => const MealListView(),
+    ),
+    GoRoute(
+      path: '/meals/:idMeal',
+      name: 'mealDetail',
+      builder: (context, state) => MealDetailView(idMeal: state.pathParameters['idMeal']!),
     ),
   ],
 );

@@ -68,3 +68,26 @@ Conceptos usados:
 Timer.periodic() para ejecutar una tarea repetitiva.
 setState() para actualizar la UI cada segundo.
 BottomNavigationBar para alternar entre el contador y una sección de descripción.
+
+
+
+--------------------taller 3---------------------------------------------------
+En este taller se consume una API de comidas y permite visualizar una lista de platillos y sus detalles, este se hace por medio de tres clases principales.
+
+Modelos: 
+Meal: Representa una comida con su ID, nombre e imagen. También incluye un método fromJson para mapear datos de la API a un objeto Dart.
+
+Servicios:
+MealService: Se encarga de realizar las solicitudes HTTP a la API.
+
+getMeals({String category}): Obtiene una lista de comidas por categoría.
+
+getMealById(String idMeal): Obtiene los detalles de una comida específica.
+
+Vistas: 
+MealListView: Muestra una lista de comidas obtenidas de la API. Cada comida puede ser seleccionada para ver más detalles.
+
+MealDetailView: Muestra la información detallada de una comida, incluyendo su imagen y nombre.
+
+También se agregaron las rutas necesarias en la clase app_router 
+

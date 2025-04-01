@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:navegabilidadgorouter/routes/app_router.dart';
 import 'package:navegabilidadgorouter/themes/app_theme.dart';
 
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); //! Importante para que funcione el dotenv, inicializa el widget
+
+  //!carga el archivo .env en la raiz del proyecto
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
