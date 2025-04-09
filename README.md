@@ -91,3 +91,9 @@ MealDetailView: Muestra la información detallada de una comida, incluyendo su i
 
 También se agregaron las rutas necesarias en la clase app_router 
 
+------------------------------------------------------------------Taller 4--------------------------------------
+En este caso se agrega el crud de establecimiento, el cual esta compuesto por models, services, y vistas.
+
+El crud se compone de crear, editar por id, listar por id, listar todo  y eliminar por id.
+
+Esto se hace por medio del consumo de api.
