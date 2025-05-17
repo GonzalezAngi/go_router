@@ -95,6 +95,14 @@ class CustomDrawer extends StatelessWidget {
               context.push('/establecimientos');
             },
           ),
+          //! ruta para cambiar el tema
+          ListTile(
+            leading: const Icon(Icons.color_lens),
+            title: const Text('Cambiar tema'),
+            onTap: () {
+              context.pushNamed('cambiar-tema');
+            },
+          ),
         ],
       ),
     );

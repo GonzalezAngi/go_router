@@ -10,6 +10,7 @@ import 'package:navegabilidadgorouter/views/establecimientos/establecimientos_li
 import 'package:navegabilidadgorouter/views/future/future_view.dart';
 import 'package:navegabilidadgorouter/views/home_view.dart';
 import 'package:navegabilidadgorouter/views/isolate/isolate_view.dart';
+import 'package:navegabilidadgorouter/views/provider/change_theme_view.dart';
 import 'package:navegabilidadgorouter/views/timer/timer_view.dart';
 
 final GoRouter appRouter = GoRouter(
@@ -88,6 +89,12 @@ final GoRouter appRouter = GoRouter(
       path: '/establecimientos/create',
       name: 'establecimientoscrear',
       builder: (context, state) => const EstablecimientoCrearView(),
+    ),
+    //!Ruta para el demo de Provider
+    GoRoute(
+      path: '/cambiar-tema',
+      name: 'cambiar-tema',
+      builder: (context, state) => const ChangeThemeView(),
     ),
   ],
 );

@@ -98,3 +98,6 @@ En este caso se agrega el crud de establecimiento, el cual esta compuesto por mo
 El crud se compone de crear, editar por id, listar por id, listar todo  y eliminar por id.
 
 Esto se hace por medio del consumo de api.
+
+----------------------------------------------------------Taller temas: tercer corte ------------------------
+En este caso se implementó una funcionalidad que permite al usuario cambiar el color principal del tema de la aplicación de forma dinámica. Para ello, se utilizó Provider para gestionar el estado del color y SharedPreferences para guardar la selección del usuario de forma persistente. Al iniciar la app, se carga el color previamente guardado y se aplica automáticamente. Además, se creó una vista donde el usuario puede elegir entre varios colores disponibles.
